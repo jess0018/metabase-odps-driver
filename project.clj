@@ -5,7 +5,7 @@
 
   :profiles
   {:provided
-   {:dependencies [[metabase-core "v0.1"]]}
+   {:dependencies [[metabase-core "1.0.0-SNAPSHOT"]]}
 
    :uberjar
    {:auto-clean    true
