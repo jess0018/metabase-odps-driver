@@ -5,5 +5,5 @@ aliyun MaxCompute(ODPS) JDBC driver for the Metabase
 
 | Metabase Release | ODPS Driver Version |
 | ---------------- | ------------------- |
-| 0.33.x           | 0.1   |
-| 0.38.x           | 0.2   |
+| 0.33.x           | release-v0.1   |
+| 0.38.x           | release-v0.2   |
