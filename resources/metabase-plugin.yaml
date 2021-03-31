@@ -1,0 +1,26 @@
+info:
+  name: Metabase MaxCompute Driver
+  version: v0.2
+  description: Allows Metabase to connect to MaxCompute databases.
+dependencies:
+  - class: com.aliyun.odps.jdbc.OdpsDriver
+    message: >
+      Metabase requires the ODPS JDBC driver in order to connect to MaxCompute databases
+driver:
+  name: odps
+  display-name: MaxCompute
+  lazy-load: true
+  parent: sql-jdbc
+  connection-properties:
+    - host
+    - merge:
+        - dbname
+        - default: projectName
+    - user
+    - password
+  connection-properties-include-tunnel-config: true
+init:
+  - step: load-namespace
+    namespace: metabase.driver.odps
+  - step: register-jdbc-driver
+    class: com.aliyun.odps.jdbc.OdpsDriver
